@@ -1,0 +1,64 @@
+/* Custom styles for Garab's portfolio */
+
+/* Import KaTeX CSS */
+@import url('https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css');
+
+/* KaTeX support for math rendering */
+.math {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.math-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 1.5rem 0;
+}
+
+/* Rounded square for hero image */
+.hero img {
+  border-radius: 1.5rem !important;
+  max-width: 280px !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;
+}
+
+/* Profile page customization */
+.profile-section {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 1.5rem;
+  margin: 0 auto 1.5rem;
+}
+
+.profile-subtitle {
+  font-size: 1.2rem;
+  color: var(--sl-color-gray-3);
+  margin-bottom: 2rem;
+}
+
+.profile-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.profile-buttons a {
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  background: var(--sl-color-accent);
+  color: var(--sl-color-white);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.profile-buttons a:hover {
+  background: var(--sl-color-accent-high);
+}

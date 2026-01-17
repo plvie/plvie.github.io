@@ -1,49 +1,58 @@
-# Starlight Starter Kit: Basics
+# Garab's Portfolio
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+Site personnel avec writeups CTF et cours de cryptographie.
 
-```
-npm create astro@latest -- --template starlight
-```
+## Déploiement sur GitHub Pages
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Étape 1: Créer le repository
 
-## 🚀 Project Structure
+1. Va sur https://github.com/new
+2. Nomme le repository `plvie.github.io`
+3. Crée le repository (public)
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+### Étape 2: Pousser le code
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+```bash
+cd /home/garab/hugo-source/new-site
+git remote add origin https://github.com/plvie/plvie.github.io.git
+git branch -M main
+git commit -m "Initial commit - Astro site"
+git push -u origin main
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+### Étape 3: Configurer GitHub Pages
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+1. Va dans les **Settings** du repository
+2. Dans le menu de gauche, clique sur **Pages**
+3. Sous **Source**, sélectionne **GitHub Actions**
+4. Le site sera automatiquement déployé à chaque push!
 
-Static assets, like favicons, can be placed in the `public/` directory.
+### Étape 4: Attendre le déploiement
 
-## 🧞 Commands
+Le workflow GitHub Actions va:
+- Installer Node.js 20
+- Installer les dépendances
+- Build le site Astro
+- Déployer sur GitHub Pages
 
-All commands are run from the root of the project, from a terminal:
+Ton site sera disponible sur: **https://plvie.github.io**
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Développement local
 
-## 👀 Want to learn more?
+```bash
+# Installer les dépendances
+npm install
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+# Lancer le serveur de dev
+npm run dev
+
+# Build pour production
+npm run build
+```
+
+## Structure
+
+- `/src/content/docs/` - Contenu en anglais
+- `/src/content/docs/fr/` - Contenu en français
+- `/src/styles/` - Styles CSS personnalisés
+- `/public/` - Assets statiques (images, etc.)
