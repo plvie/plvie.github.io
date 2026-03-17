@@ -1,7 +1,148 @@
 ---
-// Custom landing page for Paul Vié's portfolio
-import { getCollection } from 'astro:content';
-
-// Redirect to French version by default
-return Astro.redirect('/fr/');
+import Layout from '../layouts/Layout.astro';
 ---
+
+<Layout title="Paul Vié">
+
+	<!-- Hero -->
+	<div class="hero">
+		<img src="/pp.jpg" alt="Paul Vié" />
+		<div class="hero-text">
+			<h1>Paul Vié</h1>
+			<p class="subtitle">Engineering student at Télécom Paris, cryptography research</p>
+			<div class="hero-links">
+				<a href="mailto:paul.vie@telecom-paris.fr">Email</a>
+				<a href="https://github.com/plvie">GitHub</a>
+				<a href="https://linkedin.com/in/paul-vie">LinkedIn</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- About -->
+	<section id="about">
+		<h2>About</h2>
+		<p>
+			I am a second-year engineering student at <a href="https://www.telecom-paris.fr/">Télécom Paris</a>,
+			specializing in the ACCQ track (Applied Algebra: Cryptography, Coding Theory, Quantum Information).
+		</p>
+		<p>
+			During the summer of 2025, I was a research intern in the Cryptology Group at
+			<a href="https://www.cwi.nl/">CWI</a> (Centrum Wiskunde & Informatica) in Amsterdam,
+			supervised by <a href="https://ludiq.eu/">Ludo Pulles</a> and
+			<a href="https://homepages.cwi.nl/~ducas/">Léo Ducas</a>.
+			I worked on cryptanalysis of lattice-based cryptography, specifically on Sparse LWE.
+			My contributions included the implementation of cuBLASter (a GPU-accelerated lattice reduction tool)
+			and the development of a GPU Batched Babai Nearest Plane algorithm.
+		</p>
+		<p>
+			My research interests lie in lattice-based cryptography and cryptanalysis, computational algebra,
+			and the geometry of numbers. I also have broader interests in SMT solving, HPC, low-level programming,
+			and formal proofs (Coq, Lean).
+		</p>
+	</section>
+
+	<!-- Publications -->
+	<section id="publications">
+		<h2>Publications & Preprints</h2>
+
+		<div class="pub">
+			<div class="authors">L. N. Pulles, P. Vié</div>
+			<div class="title">Accelerating the Primal Hybrid Attack against Sparse LWE using GPUs</div>
+			<div class="venue">2025</div>
+			<div class="links">
+				<a href="https://eprint.iacr.org/2025/1990">ePrint</a>
+				<a href="/slides_cwi_2025.pdf">Slides</a>
+			</div>
+		</div>
+
+		<div class="pub">
+			<div class="authors">A. Karenin, E. Kirshanova, J. Nowakowski, E. W. Postlethwaite, L. N. Pulles, F. Virdia, P. Vié</div>
+			<div class="title">Cool + Cruel = Dual, and New Benchmarks for Sparse LWE</div>
+			<div class="venue">2025</div>
+			<div class="links">
+				<a href="https://eprint.iacr.org/2025/1002">ePrint</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Talks -->
+	<section id="talks">
+		<h2>Talks</h2>
+
+		<div class="talk">
+			<div class="date">Summer 2025</div>
+			<div>
+				<h3>Accelerating the Primal Hybrid Attack against Sparse LWE using GPUs</h3>
+				<p>CWI Cryptology Group, Amsterdam — <a href="/slides_cwi_2025.pdf">Slides</a></p>
+			</div>
+		</div>
+
+		<div class="talk">
+			<div class="date">June 2024</div>
+			<div>
+				<h3>Computing the Mertens Function</h3>
+				<p>Bachelor's thesis defense, Université Paris Cité — <a href="/mertens/diapo_mertens.pdf">Slides</a></p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Projects -->
+	<section id="projects">
+		<h2>Projects</h2>
+
+		<div class="project">
+			<h3>Bachelor's Thesis: Computing the Mertens Function</h3>
+			<p>
+				Université Paris Cité, supervised by
+				<a href="https://webusers.imj-prg.fr/~cathy.swaenepoel/">Cathy Swaenepoel</a>.
+				Computation of the Mertens function M(x) = Σ μ(n),
+				with a focus on optimization and efficient C implementation.
+			</p>
+			<div class="links">
+				<a href="/mertens/report_mertens.pdf">Paper</a>
+				<a href="/mertens/diapo_mertens.pdf">Slides</a>
+				<a href="/mertens/mertens_compute.c">Code</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Education -->
+	<section id="education">
+		<h2>Education</h2>
+
+		<div class="edu-item">
+			<div class="period">2024 – present</div>
+			<h3>Télécom Paris</h3>
+			<p>Engineering degree — ACCQ track (Applied Algebra: Cryptography, Coding Theory, Quantum Information)</p>
+		</div>
+
+		<div class="edu-item">
+			<div class="period">2021 – 2024</div>
+			<h3>Université Paris Cité</h3>
+			<p>Double Bachelor's degree in Mathematics and Computer Science, graduated with distinction</p>
+		</div>
+	</section>
+
+	<!-- Teaching -->
+	<section id="teaching">
+		<h2>Teaching</h2>
+
+		<div class="teaching-item">
+			<div class="period">2023 – 2024</div>
+			<div>
+				<h3>Tutor, Université Paris Cité</h3>
+				<p>Tutoring L1/L2 students in the Mathematics & Computer Science double degree program</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTF -->
+	<section id="ctf">
+		<h2>CTF</h2>
+		<p>
+			<a href="https://cryptohack.org/user/Garab/">CryptoHack</a> ·
+			<a href="https://root-me.org/Garab">Root Me</a>
+		</p>
+	</section>
+
+</Layout>
